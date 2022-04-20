@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game!</title>
+</head>
+<body>
+
+    <h1 >Welcome to the Great Number Game!</h1>
+    <h4>I am thinking of a number between 1 and 100.</h4>
+    <h5>Take a Guess!</h5>
+
+    <form action='/guess' method='post'>
+    
+        <input type="text" name="guess">
+
+        <input type="submit" name="submit" value="Sumbit">    
+
+    </form> 
+
+    {{ session['message'] }}
+
+    <!-- {% if 'guess' in session: %} -->
+        <!-- {% if session['guess'] == session['num'] %} --> 
+
+            <!-- <h2>You got the number!</h2> -->
+
+    <!-- {% elif session['guess'] < session['num'] %} -->
+
+            <!-- <h2>Too Low!!!</h2> -->
+
+    <!-- {% else %} -->
+
+            <!-- <h2>Too High!!!</h2> -->
+
+    <!-- {% endif %} -->
+<!-- {% endif %} -->
+
+    <form action='/reset'>
+
+        <input type="submit" name="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
+
